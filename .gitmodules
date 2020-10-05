@@ -1,0 +1,3 @@
+[submodule "content/drafts"]
+	path = content/drafts
+	url = git@github.com:cesards/Site-Work-Drafts.git
