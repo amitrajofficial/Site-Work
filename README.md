@@ -1,3 +1,24 @@
+# README
+
+Theme based on Leko Arts' [Gatsby Starter Minimal Blog](https://github.com/LekoArts/gatsby-starter-minimal-blog)
+
+
+## Used Plugins 
+
+- https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/
+- https://www.gatsbyjs.com/plugins/gatsby-plugin-offline/
+
+`gatsby-transformer-sharp`,
+`gatsby-plugin-sharp`,
+`gatsby-plugin-typescript`,
+
+### TODO
+
+- https://www.gatsbyjs.com/plugins/gatsby-plugin-feed
+- https://www.gatsbyjs.com/plugins/gatsby-image
+- https://www.gatsbyjs.com/plugins/gatsby-plugin-sitemap
+- https://www.gatsbyjs.com/plugins/gatsby-plugin-global-context/
+
 
 
 

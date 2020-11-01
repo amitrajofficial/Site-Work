@@ -1,3 +1,6 @@
+// https://github.com/LekoArts/gatsby-starter-minimal-blog/blob/master/gatsby-config.js
+// https://github.com/LekoArts/gatsby-themes/blob/master/themes/gatsby-theme-minimal-blog-core/gatsby-config.js
+
 require(`dotenv`).config({
   path: `.env`,
 })
@@ -11,9 +14,37 @@ module.exports = {
     siteHeadline: `Cesar Diez Sanchez's Software Development Corner`,
     siteUrl: `https://cesards.com`,
     siteDescription: `TODO`,
+    siteLanguage: `en`,
+    // siteImage: `/banner.jpg`,
     author: `Cesar Diez Sanchez`,
   },
   plugins: [
+    // You can have multiple instances of this plugin to read source nodes from different locations on your
+    // filesystem.
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // Both name and patch need to match so they can be processed by gatsby-node.js
+        name: `content/books`,
+        path: `content/books`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // Both name and patch need to match so they can be processed by gatsby-node.js
+        name: `content/work`,
+        path: `content/work`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        // Both name and patch need to match so they can be processed by gatsby-node.js
+        name: `content/talks`,
+        path: `content/talks`,
+      },
+    },
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
@@ -23,6 +54,22 @@ module.exports = {
             title: `Blog`,
             slug: `/blog`,
           },
+          {
+            title: `Books`,
+            slug: `/books`,
+          },
+          // {
+          //   title: `Talks`,
+          //   slug: `/talks`,
+          // },
+          // {
+          //   title: `Work`,
+          //   slug: `/work`,
+          // },
+          // {
+          //   title: `Projects`,
+          //   slug: `/projects`,
+          // },
           {
             title: `About`,
             slug: `/about`,
@@ -75,7 +122,12 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/about`, `/work`],
+      },
+    },
     `gatsby-plugin-netlify`,
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
