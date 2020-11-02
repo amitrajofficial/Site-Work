@@ -2,6 +2,13 @@
 
 Theme based on Leko Arts' [Gatsby Starter Minimal Blog](https://github.com/LekoArts/gatsby-starter-minimal-blog)
 
+## Build
+
+// https://www.npmjs.com/package/react-star-rating-component
+// npm install react-star-rating-component --save
+
+
+
 
 ## Used Plugins 
 
@@ -20,6 +27,9 @@ Theme based on Leko Arts' [Gatsby Starter Minimal Blog](https://github.com/LekoA
 - https://www.gatsbyjs.com/plugins/gatsby-plugin-global-context/
 
 
+## Resources
+
+- [Gatsby Starter Minimal Blog](https://github.com/LekoArts/gatsby-starter-minimal-blog)
 
 
 

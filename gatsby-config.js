@@ -22,26 +22,26 @@ module.exports = {
     // You can have multiple instances of this plugin to read source nodes from different locations on your
     // filesystem.
     {
+      // Both name and patch are hardcoded, but:
+      // name: it's key to be able to create book content on (gatsby-node.js)
+      // path: it's key to detect content on the "content/books" directory
       resolve: `gatsby-source-filesystem`,
       options: {
-        // Both name and patch need to match so they can be processed by gatsby-node.js
-        name: `content/books`,
+        name: `books`,
         path: `content/books`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        // Both name and patch need to match so they can be processed by gatsby-node.js
-        name: `content/work`,
+        name: `work`,
         path: `content/work`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        // Both name and patch need to match so they can be processed by gatsby-node.js
-        name: `content/talks`,
+        name: `talks`,
         path: `content/talks`,
       },
     },
